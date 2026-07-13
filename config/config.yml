@@ -1,0 +1,41 @@
+model:
+  pipeline_name: global_market_crash_prediction
+  pipeline_save_file: final_lgbm.pkl
+
+features:
+  - SP500_Return_5d
+  - SP500_Return_21d
+  - SP500_Return_63d
+  - VIX
+  - Gold_Return_63d
+  - Gold_Return_21d
+  - Gold_Return_5d
+  - Oil_Return_63d
+  - Oil_Return_21d
+  - Oil_Return_5d
+  - T10Y
+  - CPI
+  - Unemployment
+  - Yield_Spread
+  - GDP_Growth
+  - Gov_Expenditure
+  - Credit_Spread
+  - CAPE
+  - Sahm_Rule
+  - Oil_Price_Ratio
+  - Gold_Price_Ratio
+  - SP500_Price_Ratio
+
+target: crash
+
+features_to_drop:
+  - Date
+  - SP500_Price
+  - Gold_Price
+  - Oil_Price
+  - T2Y
+  - Fed_Rate
+  - future_return
+  - crash
+  - Unemployment_3m
+  - Unemployment_12m_low
