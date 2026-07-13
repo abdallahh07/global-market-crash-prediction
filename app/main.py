@@ -8,3 +8,13 @@ app = FastAPI(
 )
 
 app.include_router(api_router)
+
+@app.get("/")
+def root():
+    return {
+        "message": "Global Market Crash Prediction API",
+        "version": "1.0.0",
+        "docs": "/docs",
+        "health": "/health",
+        "predict": "/predict"
+    }
