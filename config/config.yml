@@ -28,7 +28,7 @@ features:
 
 target: crash
 
-features_to_drop:
+drop_features:
   - Date
   - SP500_Price
   - Gold_Price
